@@ -5,7 +5,6 @@ exports.startTrial = async (req, res, next) => {
     }
 
     // Retrieve experiment info
-
     const condition = req.session.condition;
     const group = req.session.groupName;
     const censorship = req.session.censoredInfo;
@@ -29,15 +28,6 @@ exports.startTrial = async (req, res, next) => {
       default:
         conditionText = ""; // Default to no text
     }
-
-    console.log(
-      "trial info: ",
-      conditionText,
-      group,
-      censorship,
-      censoredArrayNumber,
-      JSON.stringify(packetArray)
-    );
 
     res.render("trial.ejs", {
       conditionText,
