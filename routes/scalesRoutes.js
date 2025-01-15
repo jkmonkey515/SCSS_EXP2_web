@@ -32,4 +32,8 @@ router.get("/nmrq", (req, res) => {
   res.render("nmrq.ejs");
 });
 
+router.get("/ails", (req, res) => {
+  res.render("ails.ejs");
+});
+
 module.exports = router;

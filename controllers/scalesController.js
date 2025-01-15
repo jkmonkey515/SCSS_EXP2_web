@@ -37,6 +37,9 @@ exports.createScalesArray = (req, res) => {
     ? scales.push("/scales/tias")
     : scales.push("/scales/nmrq");
   shuffleArray(scales);
+  if (req.session.trialNumber === 3) {
+    scales.push("/scales/ails");
+  }
   req.session.scales = scales;
   let nextScale = scales.pop();
   req.session.currentScale = nextScale;
