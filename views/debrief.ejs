@@ -108,7 +108,11 @@
         <p class="fw-bold fs-4">
           By clicking the button below, you have finished the experiment.
         </p>
-        <form action="" method="POST">
+        <form
+          id="finishExperimentForm"
+          action="/participant/accuracy"
+          method="POST"
+        >
           <div class="mb-3">
             <label for="accuracy" class="form-label"
               >What percentage of correctness do you think you achieved?</label
@@ -119,16 +123,32 @@
               id="accuracy"
               name="accuracy"
               placeholder="Enter percentage (0-100)"
-              min="0"
+              min="1"
               max="100"
               required
             />
           </div>
-          <button type="submit" class="btn btn-primary">
-            Finish Experiment
-          </button>
         </form>
       </section>
+      <button class="btn btn-primary" id="finishExperimentButton">
+        Finish Experiment
+      </button>
     </section>
   </body>
+
+  <script>
+    document
+      .getElementById("finishExperimentButton")
+      .addEventListener("click", (event) => {
+        const accuracy = document.getElementById("accuracy").value;
+        if (accuracy < 1 || accuracy > 100) {
+          alert("Please enter a percentage between 1 and 100.");
+          event.preventDefault();
+        }
+
+        // If validation passes, submit the form and route to the next page
+        const form = document.getElementById("finishExperimentForm");
+        form.submit();
+      });
+  </script>
 </html>

@@ -56,8 +56,9 @@ exports.setUpParticipant = async (req, res) => {
     gender,
     age
   );
-  console.log("passed insertParticipant");
-  res.redirect("/information/description");
+
+  // res.redirect("/information/description");
+  res.redirect("/information/instructions");
 };
 
 exports.addFeedback = async (req, res) => {
@@ -66,4 +67,10 @@ exports.addFeedback = async (req, res) => {
   await req.dbServices.insertFeedback(req.session.participantId, feedback);
 
   res.redirect("/information/debrief");
+};
+
+exports.addAccuracy = async (req, res) => {
+  const accuracy = req.body["accuracy"];
+  await req.dbServices.insertPercent(req.session.participantId, accuracy);
+  res.redirect("/information/thanks");
 };

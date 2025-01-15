@@ -148,7 +148,21 @@ const insertFeedback = async (participant, feedback) => {
   }
 };
 
+const insertPercent = async (participant_id, value) => {
+  const client = await pool.connect();
+  try {
+    const query =
+      "INSERT INTO debrief_percentage (participant_id, percent) VALUES ($1, $2);";
+    const values = [participant_id, value];
+    const result = await client.query(query, values);
+  } finally {
+    client.release();
+  }
+};
+
 const dbServices = {
+  insertPercent,
+
   insertFeedback,
 
   insertItem,

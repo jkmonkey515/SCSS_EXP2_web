@@ -68,6 +68,9 @@ router.get("/rules", checkStageOfExperiment, (req, res) => {
 router.get("/debrief", (req, res) => {
   res.render("debrief.ejs");
 });
+router.get("/thanks", (req, res) => {
+  res.render("thanks.ejs");
+});
 
 router.post("/debrief", (req, res) => {
   res.render("thanks.ejs");
