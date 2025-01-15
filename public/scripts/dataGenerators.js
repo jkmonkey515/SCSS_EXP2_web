@@ -1,13 +1,15 @@
 // Generate a random IP address
 const generateRandomIP = () => {
-  return `${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
+  return `${Math.floor(Math.random() * 256)}.${Math.floor(
+    Math.random() * 256
+  )}.${Math.floor(Math.random() * 256)}.${Math.floor(Math.random() * 256)}`;
 };
 
 // Generate random CheckSum value
 const generateRandomCheckSum = () => {
-  const values = ['Valid', 'Invalid', 'Zero'];
+  const values = ["Valid", "Invalid", "Zero"];
   return values[Math.floor(Math.random() * values.length)];
-}
+};
 
 //  Generate random 24hr clock time
 const generateRandomTime = () => {
@@ -18,7 +20,7 @@ const generateRandomTime = () => {
   minutes = minutes < 10 ? "0" + minutes : minutes;
 
   return `${hours} : ${minutes}`;
-}
+};
 
 // Generate a random country from a predefined list
 const generateRandomCountry = () => {
@@ -42,8 +44,8 @@ const generateRandomCountry = () => {
     "Cogo",
     "Donovia",
     "Novoselic",
-    "Limenisland"
-];
+    "Limenisland",
+  ];
 
   return countries[Math.floor(Math.random() * countries.length)];
 };
@@ -52,5 +54,5 @@ module.exports = {
   generateRandomCheckSum,
   generateRandomCountry,
   generateRandomIP,
-  generateRandomTime
+  generateRandomTime,
 };

@@ -5,19 +5,20 @@ const express = require("express");
 
 // check for routing purposes trial number
 const checkStageOfExperiment = (req, res, next) => {
+  console.log("trial number req.session.trialNumber", req.session.trialNumber);
+
   // if (req.session.trialNumber === 1 || req.session.trialNumber === 3) {
   if (req.session.trialNumber === 1) {
-    console.log("trial number check passed");
     req.session.getScales = !req.session.getScales;
     console.log(req.session.getScales);
     if (req.session.getScales) {
-      console.log("get scales check passed");
       return res.redirect("/scales/getScale");
     } else {
       return next();
     }
   } else if (req.session.trialNumber === 3) {
     req.session.getScales = !req.session.getScales;
+    console.log(req.session.getScales);
     if (req.session.getScales) {
       return res.redirect("/scales/getScale");
     } else {

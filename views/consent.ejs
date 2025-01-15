@@ -37,9 +37,8 @@
       <br />
       <p>
         I confirm that I have read the information sheet and understand that my
-        participation in this project which will require approximately one hour
-        of my time for which I will be awarded 5 EMS course credits for taking
-        part.
+        participation in this project will require approximately one hour of my
+        time for which I will be awarded 5 EMS course credits for taking part.
       </p>
       <p>
         I understand that participation will involve completing a cybersecurity
@@ -101,6 +100,7 @@
             class="form-check-input"
             id="consent-checkbox"
             name="consent-checkbox"
+            checked
           />
           <label for="consent-checkbox" class="form-check-label">
             I consent to participate in the study conducted by Mordecai Otter of
@@ -118,6 +118,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I confirm that I have read the information sheet on the previous
@@ -134,6 +135,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I confirm that I understand the information sheet and have had the
@@ -150,6 +152,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I understand that my participation is voluntary, and I am free to
@@ -167,6 +170,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I consent to the processing of my personal information such as my
@@ -183,6 +187,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I understand who will have access to my personal information, how
@@ -200,6 +205,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I understand that after the research project, anonymised data may
@@ -216,6 +222,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I consent to having my webcam turned on and used for the purposes
@@ -233,6 +240,7 @@
               class="form-check-input me-2"
               style="margin-left: -1rem"
               name="consent-statement"
+              checked
             />
             <p class="mb-0">
               I understand how the findings and results of the research project
@@ -241,12 +249,12 @@
           </div>
         </div>
         <br /><br />
-        <!-- ... (repeat for all other consent statements) ... -->
+
+        <!-- Gender and Age selection -->
         <form id="consent-form" action="/participant/login" method="POST">
           <div class="mb-3">
             <label for="gender" class="form-label">What is your gender?</label>
             <select class="form-select" id="gender" name="gender" required>
-              <option value="">Choose...</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>

@@ -83,13 +83,6 @@
     <!-- Page Title -->
     <title>Security Control Simulation System</title>
   </head>
-  <script>
-    var packetArray = JSON.parse("<%- packetArray %>");
-    var conditionText = "<%= conditionText %>";
-    var group = "<%= group %>";
-    var censoredInfo = "<%= censorship %>";
-    var censoredArrayNumber = parseInt("<%= censoredArrayNumber %>");
-  </script>
 
   <body>
     <!-- Navigation Bar -->
@@ -164,9 +157,20 @@
         </div>
       </aside>
     </section>
-
     <!-- Additional Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
-    <script type="module" src="../public/scripts/trial.js"></script>
   </body>
+
+  <script>
+    var packetArrayTemp = "<%= packetArray %>";
+    packetArrayTemp = packetArrayTemp.replaceAll("&#34;", '"');
+    var packetArray = JSON.parse(packetArrayTemp);
+
+    // var packetArray = "<%- packetArray %>";
+    var conditionText = "<%= conditionText %>";
+    var group = "<%= group %>";
+    var censoredInfo = "<%= censorship %>";
+    var censoredArrayNumber = parseInt("<%= censoredArrayNumber %>");
+  </script>
+  <script type="module" src="../public/scripts/trial.js"></script>
 </html>

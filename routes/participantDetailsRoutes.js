@@ -11,9 +11,9 @@ const {
 const router = express.Router();
 
 router.post("/login", async (req, res) => {
-  setUpParticipant(req, res);
-  const packetArray = setPacketArray();
+  const packetArray = await setPacketArray();
   req.session.packetArray = packetArray;
+  setUpParticipant(req, res);
 });
 
 // get feedback view
