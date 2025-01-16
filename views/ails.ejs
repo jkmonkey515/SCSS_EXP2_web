@@ -18,7 +18,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"></script> -->
     <!-- Favicon -->
     <link rel="icon" href="/public/assets/favicon.webp" type="image/x-icon" />
     <!-- Page Title -->
@@ -44,7 +43,7 @@
 
       <form action="/scales/addScale" method="post">
         <div class="form-group">
-          <label for="nmrq-1">
+          <label for="ails-1">
             <p class="form-text">
               1. I can distinguish between smart devices and non-smart devices.
             </p></label
@@ -53,16 +52,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-1-<%= i%>"
-              name="nmrq-1"
+              id="ails-1-<%= i%>"
+              name="ails-1"
               value="<%= i %>"
             />
-            <label for="nmrq-1-<%= i%>"><%= i%></label>
+            <label for="ails-1-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-2">
+          <label for="ails-2">
             <p class="form-text">
               2. I do not know how AI technology can help me.
             </p></label
@@ -71,16 +70,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-2-<%= i%>"
-              name="nmrq-2"
+              id="ails-2-<%= i%>"
+              name="ails-2"
               value="<%= i %>"
             />
-            <label for="nmrq-2-<%= i%>"><%= i%></label>
+            <label for="ails-2-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-3">
+          <label for="ails-3">
             <p class="form-text">
               3. I can identify the AI technology employed in the applications
               and products I use.
@@ -90,16 +89,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-3-<%= i%>"
-              name="nmrq-3"
+              id="ails-3-<%= i%>"
+              name="ails-3"
               value="<%= i %>"
             />
-            <label for="nmrq-3-<%= i%>"><%= i%></label>
+            <label for="ails-3-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-4">
+          <label for="ails-4">
             <p class="form-text">
               4. I can skilfully use AI applications or products to help me with
               my daily work.
@@ -109,16 +108,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-4-<%= i%>"
-              name="nmrq-4"
+              id="ails-4-<%= i%>"
+              name="ails-4"
               value="<%= i %>"
             />
-            <label for="nmrq-4-<%= i%>"><%= i%></label>
+            <label for="ails-4-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-5">
+          <label for="ails-5">
             <p class="form-text">
               5. It is usually hard for me to learn to use a new AI application
               or product.
@@ -128,16 +127,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-5-<%= i%>"
-              name="nmrq-5"
+              id="ails-5-<%= i%>"
+              name="ails-5"
               value="<%= i %>"
             />
-            <label for="nmrq-5-<%= i%>"><%= i%></label>
+            <label for="ails-5-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-6">
+          <label for="ails-6">
             <p class="form-text">
               6. I can use AI applications or products to improve my work
               efficiency.
@@ -147,16 +146,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-6-<%= i%>"
-              name="nmrq-6"
+              id="ails-6-<%= i%>"
+              name="ails-6"
               value="<%= i %>"
             />
-            <label for="nmrq-6-<%= i%>"><%= i%></label>
+            <label for="ails-6-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-7">
+          <label for="ails-7">
             <p class="form-text">
               7. I can evaluate the capabilities and limitations of an AI
               application or product after using it for a while.
@@ -166,16 +165,16 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-7-<%= i%>"
-              name="nmrq-7"
+              id="ails-7-<%= i%>"
+              name="ails-7"
               value="<%= i %>"
             />
-            <label for="nmrq-7-<%= i%>"><%= i%></label>
+            <label for="ails-7-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-8">
+          <label for="ails-8">
             <p class="form-text">
               8. I can choose a proper solution from various solutions provided
               by a smart agent.
@@ -185,35 +184,35 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-8-<%= i%>"
-              name="nmrq-8"
+              id="ails-8-<%= i%>"
+              name="ails-8"
               value="<%= i %>"
             />
-            <label for="nmrq-8-<%= i%>"><%= i%></label>
+            <label for="ails-8-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-9">
+          <label for="ails-9">
             <p class="form-text">
               9. I can choose the most appropriate AI application or product
-              from a variety for a particular task.
+              from a variety for a particular task. (optional)
             </p></label
           >
           <div class="likert-scale">
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-9-<%= i%>"
-              name="nmrq-9"
+              id="ails-9-<%= i%>"
+              name="ails-9"
               value="<%= i %>"
             />
-            <label for="nmrq-9-<%= i%>"><%= i%></label>
+            <label for="ails-9-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-10">
+          <label for="ails-10">
             <p class="form-text">
               10. I always comply with ethical principles when using AI
               applications or products
@@ -223,35 +222,35 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-10-<%= i%>"
-              name="nmrq-10"
+              id="ails-10-<%= i%>"
+              name="ails-10"
               value="<%= i %>"
             />
-            <label for="nmrq-10-<%= i%>"><%= i%></label>
+            <label for="ails-10-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-11">
+          <label for="ails-11">
             <p class="form-text">
               11. I am never alert to privacy and information security issues
-              when using AI applications or products
+              when using AI applications or products (optional)
             </p></label
           >
           <div class="likert-scale">
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-11-<%= i%>"
-              name="nmrq-11"
+              id="ails-11-<%= i%>"
+              name="ails-11"
               value="<%= i %>"
             />
-            <label for="nmrq-11-<%= i%>"><%= i%></label>
+            <label for="ails-11-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
         <div class="form-group">
-          <label for="nmrq-12">
+          <label for="ails-12">
             <p class="form-text">
               12. I am always alert to the abuse of AI technology
             </p></label
@@ -260,11 +259,11 @@
             <% for (let i = 1; i <= 5; i++) {%>
             <input
               type="radio"
-              id="nmrq-12-<%= i%>"
-              name="nmrq-12"
+              id="ails-12-<%= i%>"
+              name="ails-12"
               value="<%= i %>"
             />
-            <label for="nmrq-12-<%= i%>"><%= i%></label>
+            <label for="ails-12-<%= i%>"><%= i%></label>
             <% } %>
           </div>
         </div>
@@ -273,11 +272,11 @@
         </div>
       </form>
     </section>
-    <script>
+    <!-- <script>
       document.getElementById("submit").addEventListener("click", () => {
         var allItems = document.querySelectorAll("input");
         let items = [];
-        for (let i = 0; i < allItems.length; i += 7) {
+        for (let i = 0; i < allItems.length; i++) {
           items.push(allItems[i].name);
         }
         for (let i = 0; i < items.length; i++) {
@@ -289,11 +288,57 @@
               console.log("checked flag has changed");
             }
           }
-          if (checkedFlag === false) {
-            window.alert(
-              `Please respond to question number ${items[i].slice(-2)}`
-            );
+          if (i == 8 || i == 10) {
+          } else {
+            if (checkedFlag === false) {
+              window.alert(
+                `Please respond to question number ${items[i].slice(-2)}`
+              );
+              event.preventDefault();
+            }
+          }
+        }
+      });
+    </script> -->
+
+    <script>
+      document.getElementById("submit").addEventListener("click", (event) => {
+        // Get all input elements
+        const allInputs = document.querySelectorAll("input");
+        let questions = [];
+
+        // Collect all unique question names
+        allInputs.forEach((input) => {
+          if (!questions.includes(input.name)) {
+            questions.push(input.name);
+          }
+        });
+
+        // Loop through each question
+        for (let i = 0; i < questions.length; i++) {
+          const questionName = questions[i];
+          const questionInputs = document.getElementsByName(questionName);
+
+          // Skip questions #9 and #11
+          const questionNumber = parseInt(questionName.match(/\d+/)[0], 10);
+          if (questionNumber === 9 || questionNumber === 11) {
+            continue;
+          }
+
+          // Check if at least one option is selected for the question
+          let isChecked = false;
+          for (let j = 0; j < questionInputs.length; j++) {
+            if (questionInputs[j].checked) {
+              isChecked = true;
+              break;
+            }
+          }
+
+          // Show an alert and prevent form submission if no option is selected
+          if (!isChecked) {
+            window.alert(`Please respond to question number ${questionNumber}`);
             event.preventDefault();
+            return; // Stop further checks after finding the first unanswered question
           }
         }
       });

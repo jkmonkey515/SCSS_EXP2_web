@@ -29,8 +29,6 @@ exports.startTrial = async (req, res, next) => {
         conditionText = ""; // Default to no text
     }
 
-    // console.log("before packetArraypacketArray", JSON.stringify(packetArray));
-
     res.render("trial.ejs", {
       conditionText,
       group,

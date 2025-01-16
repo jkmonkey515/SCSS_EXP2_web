@@ -1,31 +1,25 @@
 const configureConditions = (participantId) => {
   // set up experiment parameters
-  // const conditionNumber = participantId % 3;
-  const conditionNumber = participantId % 9;
+  const conditionNumber = participantId % 3;
   const groupNumber = parseInt(participantId) % 2;
   const censorGroupNumber = Math.floor(participantId / 4) % 2;
 
   let condition = "";
   switch (conditionNumber) {
     case 0:
-    case 1:
-    case 2:
-    case 5:
-    case 8:
       condition = "noAdvisor";
       break;
-    case 3:
-    case 4:
+    case 1:
       condition = "aiAdvisor";
       break;
-    case 6:
-    case 7:
+    case 2:
       condition = "humanAdvisor";
       break;
     default:
       condition = "noAdvisor"; // Default to noAdvisor
   }
 
+  console.log("Participant condition: ", conditionNumber, condition);
   const groupName = groupNumber === 0 ? "A" : "B";
   const censorGroup = censorGroupNumber === 0 ? "RIO" : "SIO";
 

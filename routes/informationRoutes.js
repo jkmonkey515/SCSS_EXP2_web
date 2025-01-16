@@ -5,27 +5,28 @@ const express = require("express");
 
 // check for routing purposes trial number
 const checkStageOfExperiment = (req, res, next) => {
-  console.log("trial number req.session.trialNumber", req.session.trialNumber);
+  const currentTrialNumber = req.session.trialNumber;
+  switch (currentTrialNumber) {
+    case 1:
+      req.session.getScales = !req.session.getScales;
 
-  // if (req.session.trialNumber === 1 || req.session.trialNumber === 3) {
-  if (req.session.trialNumber === 1) {
-    req.session.getScales = !req.session.getScales;
-    console.log(req.session.getScales);
-    if (req.session.getScales) {
-      return res.redirect("/scales/getScale");
-    } else {
+      if (req.session.getScales) {
+        return res.redirect("/scales/getScale");
+      } else {
+        return next();
+      }
+    case 2:
+      req.session.condition = "noAdvisor";
       return next();
-    }
-  } else if (req.session.trialNumber === 3) {
-    req.session.getScales = !req.session.getScales;
-    console.log(req.session.getScales);
-    if (req.session.getScales) {
-      return res.redirect("/scales/getScale");
-    } else {
-      return res.redirect("/participant/feedback");
-    }
-  } else {
-    return next();
+    case 3:
+      req.session.getScales = !req.session.getScales;
+      if (req.session.getScales) {
+        return res.redirect("/scales/getScale");
+      } else {
+        return res.redirect("/participant/feedback");
+      }
+    default:
+      return next();
   }
 };
 

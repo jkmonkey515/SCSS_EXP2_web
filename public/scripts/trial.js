@@ -369,22 +369,24 @@ const handleInput = async (data) => {
 };
 
 window.addEventListener("load", () => {
-  webgazer.params.moveTickSize = 100;
-  webgazer.params.dataTimestep = 100;
-  webgazer
-    .setRegression("ridge")
-    .showVideoPreview(false)
-    .showPredictionPoints(false)
-    .applyKalmanFilter(false)
-    .saveDataAcrossSessions(true)
-    .setGazeListener((data, time) => {
-      if (data == null) {
-        return;
-      }
-      gazeData.push({ x: data.x, y: data.y, time });
-    })
-    .begin()
-    .then(() => {
-      startTrial();
-    });
+  startTrial();
+
+  // webgazer.params.moveTickSize = 100;
+  // webgazer.params.dataTimestep = 100;
+  // webgazer
+  //   .setRegression("ridge")
+  //   .showVideoPreview(false)
+  //   .showPredictionPoints(false)
+  //   .applyKalmanFilter(false)
+  //   .saveDataAcrossSessions(true)
+  //   .setGazeListener((data, time) => {
+  //     if (data == null) {
+  //       return;
+  //     }
+  //     gazeData.push({ x: data.x, y: data.y, time });
+  //   })
+  //   .begin()
+  //   .then(() => {
+  //     startTrial();
+  //   });
 });
