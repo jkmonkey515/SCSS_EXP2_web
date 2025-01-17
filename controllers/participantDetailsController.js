@@ -67,11 +67,12 @@ exports.addFeedback = async (req, res) => {
 
   await req.dbServices.insertFeedback(req.session.participantId, feedback);
 
-  res.redirect("/information/debrief");
+  // res.redirect("/information/debrief");
 };
 
 exports.addAccuracy = async (req, res) => {
   const accuracy = req.body["accuracy"];
   await req.dbServices.insertPercent(req.session.participantId, accuracy);
-  res.redirect("/information/thanks");
+  // res.redirect("/information/thanks");
+  res.redirect("/information/debrief");
 };
